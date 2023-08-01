@@ -2,15 +2,14 @@
 
 ### 前言
 
-基于 [RageFrame3](https://github.com/jianyan74/rageframe3) 的一款免费开源的基础销售功能的商城，前端基于 uni-app，一端发布多端通用。
-
+基于 [RageFrame3](https://github.com/jianyan74/rageframe3) 的一款免费开源的基础销售功能的商城，前端基于 uni-app，一端发布多端通用, 使用了 `vue3`, `vite4`, `typescript`, `javascript` 等主流开发技术。
 ### 项目地址
 
 前端开源地址: [https://github.com/jianyan74/TinyShop-UniApp](https://github.com/jianyan74/TinyShop-UniApp)
 
 后端开源地址: [https://github.com/jianyan74/TinyShop](https://github.com/jianyan74/TinyShop)
 
-Uni-App插件地址: [https://ext.dcloud.net.cn/plugin?id=1427](https://ext.dcloud.net.cn/plugin?id=1427)
+Uni-App插件地址: [https://ext.dcloud.net.cn/plugin?id=13865](https://ext.dcloud.net.cn/plugin?id=13865)
 
 ### B2C-Demo
 
