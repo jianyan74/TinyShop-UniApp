@@ -1,0 +1,459 @@
+[
+  {
+    title: "导航",
+    children: [
+      {
+        title: "首页",
+        route: "index",
+        path: "/pages/index/index",
+      },
+      {
+        title: "分类",
+        route: "category",
+        path: "/pages/tab/category/category",
+      },
+      {
+        title: "消息",
+        route: "notify",
+        path: "/pages/tab/notify/notify",
+      },
+      {
+        title: "社区",
+        route: "circle",
+        path: "/pages/tab/circle/circle",
+      },
+      {
+        title: "购物车",
+        route: "cart",
+        path: "/pages/tab/cart/cart",
+      },
+      {
+        title: "我的",
+        route: "profile",
+        path: "/pages/tab/profile/profile",
+      },
+    ],
+  },
+  {
+    title: "公共",
+    children: [
+      // public
+      {
+        title: "登录",
+        route: "login",
+        path: "/pages/public/login",
+      },
+      {
+        title: "授权登录",
+        route: "loginAuthorized",
+        path: "/pages/public/loginAuthorized",
+      },
+      {
+        title: "注册",
+        route: "register",
+        path: "/pages/public/register",
+      },
+      {
+        title: "修改密码",
+        route: "password",
+        path: "/pages/public/password",
+      },
+      {
+        title: "公告",
+        route: "notice",
+        path: "/pages/public/notice/notice",
+      },
+    ],
+  },
+  {
+    title: "种草",
+    children: [
+      // circle
+      {
+        title: "帖子列表",
+        route: "order",
+        path: "/pages/tab/circle/circle",
+      },
+      {
+        title: "我的帖子",
+        route: "myCircle",
+        path: "/pages/circle/my",
+      },
+      {
+        title: "我的收藏",
+        route: "circleCollection",
+        path: "/pages/circle/collection",
+      },
+      {
+        title: "发布帖子",
+        route: "register",
+        path: "/pages/circle/upload",
+      },
+    ],
+  },
+  {
+    title: "订单",
+    children: [
+      {
+        title: "订单列表",
+        route: "order",
+        path: "/pages/tab/order/order",
+      },
+      {
+        title: "售后列表",
+        route: "refund",
+        path: "/pages/order/refund",
+      },
+    ],
+  },
+  {
+    title: "商品",
+    children: [
+      {
+        title: "商品列表",
+        route: "productList",
+        path: "/pages/product/list",
+      },
+      {
+        title: "商品精选",
+        route: "productExcellent",
+        path: "/pages/product/excellent",
+      },
+      {
+        title: "搜索",
+        route: "productSearch",
+        path: "/pages/product/search",
+      },
+      {
+        title: "商品海报",
+        route: "prodPoster",
+        path: "/pages/product/prodPoster",
+      }
+    ],
+  },
+  {
+    title: "客服",
+    children: [
+      {
+        title: "联系客服",
+        route: "service",
+        path: "/pages/service/service",
+      },
+      {
+        title: "客服中心",
+        route: "serviceCenter",
+        path: "/pages/service/center",
+      },
+    ],
+  },
+  {
+    title: "我的",
+    children: [
+      {
+        title: "我的账户",
+        route: "account",
+        path: "/pages/user/account/account",
+      },
+      {
+        title: "账单明细",
+        route: "bill",
+        path: "/pages/user/account/bill",
+      },
+      {
+        title: "积分详情",
+        route: "integral",
+        path: "/pages/user/account/integral",
+      },
+      {
+        title: "会员等级",
+        route: "level",
+        path: "/pages/user/account/level",
+      },
+      {
+        title: "充值",
+        route: "recharge",
+        path: "/pages/user/account/recharge",
+      },
+      {
+        title: "会员中心",
+        route: "accountCenter",
+        path: "/pages/user/card/center",
+      },
+      {
+        title: "开通会员",
+        route: "toVip",
+        path: "/pages/user/card/tovip",
+      },
+      {
+        title: "收货地址",
+        route: "address",
+        path: "/pages/user/address/address",
+      },
+      {
+        title: "收货地址管理",
+        route: "addressManage",
+        path: "/pages/user/address/manage",
+      },
+      {
+        title: "我的砍价",
+        route: "bargainMy",
+        path: "/pages/marketing/bargain/my",
+      },
+      {
+        title: "我的拼团",
+        route: "wholesaleMy",
+        path: "/pages/marketing/wholesale/my",
+      },
+      {
+        title: "我的收藏",
+        route: "collection",
+        path: "/pages/user/collection",
+      },
+      {
+        title: "我的优惠券",
+        route: "coupon",
+        path: "/pages/user/coupon/coupon",
+      },
+      {
+        title: "领券中心",
+        route: "couponList",
+        path: "/pages/user/coupon/center",
+      },
+      {
+        title: "我的足迹",
+        route: "footprint",
+        path: "/pages/user/footprint",
+      },
+      {
+        title: "修改手机号",
+        route: "mobile",
+        path: "/pages/user/mobile",
+      },
+      {
+        title: "修改资料",
+        route: "userinfo",
+        path: "/pages/user/userinfo",
+      },
+      {
+        title: "我的核销码",
+        route: "virtual",
+        path: "/pages/user/virtual/virtual",
+      },
+    ],
+  },
+  {
+    title: "营销",
+    children: [
+      {
+        title: "每日签到",
+        route: "signIn",
+        path: "/pages/sign/sign-in",
+      },
+      {
+        title: "签到排行榜",
+        route: "signInRank",
+        path: "/pages/sign/sign-in-rank",
+      },
+      {
+        title: "直播",
+        route: "liveList",
+        path: "/pages/marketing/live",
+      },
+      {
+        title: "积分商城",
+        route: "point",
+        path: "/pages/marketing/point",
+      },
+      {
+        title: "预售列表",
+        route: "preSellList",
+        path: "/pages/marketing/list?marketingType=pre_sell",
+      },
+      {
+        title: "团购列表",
+        route: "groupBuyList",
+        path: "/pages/marketing/list?marketingType=group_buy",
+      },
+      {
+        title: "限时折扣列表",
+        route: "discountList",
+        path: "/pages/marketing/list?marketingType=discount",
+      },
+      {
+        title: "限时秒杀列表",
+        route: "secKillList",
+        path: "/pages/marketing/list?marketingType=sec_kill",
+      },
+      {
+        title: "砍价列表",
+        route: "bargainList",
+        path: "/pages/marketing/list?marketingType=bargain",
+      },
+      {
+        title: "拼团列表",
+        route: "wholesaleList",
+        path: "/pages/marketing/list?marketingType=wholesale",
+      },
+      {
+        title: "开团记录(拼团)",
+        route: "wholesaleGroup",
+        path: "/pages/marketing/wholesale/group?state=1",
+      }
+    ],
+  },
+  {
+    title: "商家中心",
+    children: [
+      {
+        title: "商家核销",
+        route: "merchantOrderVerifyList",
+        path: "/pages/merchantCentre/order/verify/list",
+      }
+    ],
+  },
+  {
+    title: "分销",
+    children: [
+      {
+        title: "推广中心",
+        route: "distribute",
+        path: "/pages/tab/distribute/distribute",
+      },
+      {
+        title: "等级说明",
+        route: "distributeLevel",
+        path: "/pages/distribute/level",
+      },
+      {
+        title: "申请推广员",
+        route: "distributeApply",
+        path: "/pages/distribute/apply",
+      },
+      {
+        title: "我的团队",
+        route: "agent",
+        path: "/pages/distribute/agent",
+      },
+      {
+        title: "佣金明细",
+        route: "brokerage",
+        path: "/pages/distribute/brokerage/brokerage",
+      },
+      {
+        title: "佣金排行榜",
+        route: "brokerageRank",
+        path: "/pages/distribute/brokerage/rank",
+      },
+      {
+        title: "申请提现",
+        route: "cash",
+        path: "/pages/distribute/cash/cash",
+      },
+      {
+        title: "提现明细",
+        route: "cashList",
+        path: "/pages/distribute/cash/list",
+      },
+      {
+        title: "分销订单",
+        route: "distributeOrder",
+        path: "/pages/distribute/order",
+      },
+      {
+        title: "推广商品",
+        route: "distributeProduct",
+        path: "/pages/distribute/product",
+      },
+      {
+        title: "申请区域代理",
+        route: "regionalApply",
+        path: "/pages/distribute/regionalApply",
+      },
+      {
+        title: "分销商信息",
+        route: "spread",
+        path: "/pages/distribute/spread/spread",
+      },
+      {
+        title: "推广二维码",
+        route: "spreadPromote",
+        path: "/pages/distribute/spread/promote",
+      },
+      {
+        title: "提现账号",
+        route: "withdraw",
+        path: "/pages/distribute/withdraw/withdraw",
+      },
+      {
+        title: "提现账号管理",
+        route: "withdrawManage",
+        path: "/pages/distribute/withdraw/manage",
+      },
+    ],
+  },
+  {
+    title: "商户",
+    children: [
+      {
+        title: "商户列表",
+        route: "merchantList",
+        path: "/pages/merchant/list",
+      },
+    ],
+  },
+  {
+    title: "设置",
+    children: [
+      {
+        title: "设置",
+        route:"set",
+        path: "/pages/set/set"
+      },
+      {
+        route: "security",
+        title: "账号与安全",
+        path: "/pages/set/security"
+      },
+      {
+        title: "关于",
+        route:"about",
+        path: "/pages/set/about/about"
+      },
+      {
+        title: "授权列表",
+        route:"authorization",
+        path: "/pages/set/authorization"
+      },
+      {
+        title: "意见反馈",
+        route:"feedback",
+        path: "/pages/set/feedback/feedback"
+      },
+      {
+        title: "意见反馈",
+        route:"feedbackList",
+        path: "/pages/set/feedback/list"
+      },
+      {
+        title: "站点帮助",
+        route:"helper",
+        path: "/pages/set/helper/helper"
+      },
+      {
+        title: "发票管理",
+        route:"invoice",
+        path: "/pages/set/invoice/invoice"
+      },
+      {
+        title: "开票列表",
+        route:"invoiceList",
+        path: "/pages/set/invoice/list"
+      },
+      {
+        title: "开票历史",
+        route:"invoiceManage",
+        path: "/pages/set/invoice/manage"
+      },
+    ],
+  }
+];

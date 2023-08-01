@@ -1,0 +1,1 @@
+type N = Record<string, any>

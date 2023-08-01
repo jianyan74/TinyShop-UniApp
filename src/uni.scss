@@ -1,0 +1,64 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+
+
+/* 图片尺寸 */
+$img-size-sm:40rpx;
+$img-size-base:52rpx;
+$img-size-lg:80rpx;
+
+/* 页面左右间距 */
+$page-base-spacing: 24rpx;
+$spacing-lg: 30rpx;
+$spacing-base: 20rpx;
+$spacing-sm: 10rpx;
+
+$color-white: #fff;
+$color-black: #000;
+
+$page-row-spacing: 30rpx;
+$page-color-base: #f8f8f8;
+$page-color-light: #fefefe;
+$page-color-dark: #f1f1f1;
+$base-color: #fa436a;
+
+/* 文字尺寸 */
+$font-xs: 22rpx;
+$font-sm: 24rpx;
+$font-base: 28rpx;
+$font-lg: 32rpx;
+
+/*文字颜色*/
+$font-color-dark: #333;
+$font-color-base: #666;
+$font-color-light: #999999;
+$font-color-disabled: #ccc;
+$font-color-spec: #4399fc;
+
+/* 边框颜色 */
+$border-color-dark: #DCDFE6;
+$border-color-base: #ededed;
+$border-color-light: #f5f5f5;
+$border-radius-sm: 6rpx;
+$border-radius-base: 12rpx;
+$border-radius-lg: 18rpx;
+
+/* 图片加载中颜色 */
+$image-bg-color: #eee;
+
+/* 行为相关颜色 */
+$uni-color-primary:#fa436a;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;

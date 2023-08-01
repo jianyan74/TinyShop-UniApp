@@ -1,0 +1,1004 @@
+view,
+p,
+scroll-view,
+swiper,
+swiper-item,
+cover-view,
+cover-image,
+icon,
+text,
+rich-text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+radio,
+slider,
+switch,
+textarea,
+navigator,
+audio,
+camera,
+image,
+video {
+  box-sizing: border-box;
+  font-size: $font-base;
+}
+
+/* 骨架屏替代方案 */
+.rf-skeleton {
+  background: $color-white;
+  padding: 20rpx 0;
+  border-radius: 8rpx;
+  box-shadow: 0rpx 5rpx 25rpx rgba(0, 0, 0, 0.05);
+}
+/*边框*/
+.b-b:after,
+.b-t:after {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  height: 0;
+  content: '';
+  transform: scaleY(.5);
+  border-bottom: 1px solid $border-color-base;
+}
+.b-b:after {
+  bottom: 0;
+}
+.b-t:after {
+  top: 0;
+}
+/* button样式改写 */
+uni-button,
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: $font-base;
+  border: 1rpx solid;
+  background: none;
+  &.no-border:before,
+  &.no-border:after {
+    border: none;
+  }
+}
+
+.btn-safe-area-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2 + 10rpx) !important;
+}
+
+.rf-box-shadow {
+  box-shadow: 0rpx 5rpx 25rpx rgba(0, 0, 0, 0.05);
+}
+.in1line {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 1;
+}
+.in2line {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2;
+}
+.in10line {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 10;
+}
+.in100line {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 100;
+}
+// navBar样式
+.navbar {
+  display: flex;
+  height: 40px;
+  padding: 0 5px;
+  background: #fff;
+  //box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 10;
+  .nav-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 15px;
+    position: relative;
+    &.current {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 60rpx;
+        height: 0;
+        border-bottom: 6rpx solid;
+        border-radius: 2rpx;
+      }
+    }
+  }
+}
+/* 底部操作菜单 */
+.page-bottom {
+  background-color: $color-white;
+  position: fixed;
+  left: 0;
+  bottom:0;
+  z-index: 95;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100vw;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.1);
+  padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+  .page-bottom-bth-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: $spacing-sm;
+    padding: $spacing-base 0;
+    .cart {
+      position: relative;
+      .badge {
+        position: absolute;
+        top: -2rpx;
+        right: 4rpx;
+      }
+    }
+    .p-b-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $font-color-base;
+      flex: 1;
+      padding: 0;
+      line-height: 1.2;
+      .mb-4 {
+        margin-bottom: 4rpx;
+      }
+      .badge {
+        position: absolute;
+        top: -8rpx;
+        right: -2rpx;
+      }
+    }
+    .p-b-btn:after {
+      border: none;
+      background: none;
+      padding: 0;
+    }
+  }
+  .action-btn-group {
+    display: flex;
+    height: 72rpx;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: 0 20rpx;
+    position: relative;
+    .action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 220rpx;
+      height: 100%;
+      font-size: $font-base;
+      padding: 0;
+      border-radius: 0;
+    }
+    .action-btn:first-child {
+      &:after {
+        border: none;
+      }
+    }
+    .action-btn::after {
+      border: none !important;
+    }
+    // 按钮两行显示
+    .btnIn2Line {
+      width: 220rpx;
+      line-height: 72rpx;
+      padding-top: 4rpx;
+      .text {
+        line-height: 36rpx;
+        font-size: $font-sm + 2rpx;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border: none;
+        border-right: 1rpx solid;
+        transform: translateY(-50%);
+        height: 28rpx;
+        width: 0;
+      }
+    }
+    .btnIn2Line:first-child {
+      &:after {
+        border: none;
+      }
+    }
+  }
+  .action-btn-submit {
+    height: 72rpx;
+    line-height: 72rpx;
+    min-width: 320rpx;
+    border-radius: 100px;
+    margin: 0 20rpx 0 80rpx;
+    font-size: $font-base - 2rpx;
+    max-width: 360rpx;
+  }
+}
+// 通用商品样式
+.rf-product-list {
+  .mb-item {
+    margin-bottom: 16rpx;
+  }
+  &__picture {
+    position: relative;
+    .no-sale-num {
+      width: 100%;
+      height: 100%;
+      padding: 0 48rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.36);
+      border-radius: 12rpx;
+    }
+    .sketch {
+      width: calc(100% - 2rpx);
+      background-color: rgba(0, 0, 0, 0.36);
+      position: absolute;
+      bottom: 0;
+      padding: 0 12rpx;
+      left: 0;
+      color: #fff;
+      font-size: $font-sm;
+      height: 40rpx;
+      line-height: 40rpx;
+      border-radius: 0;
+    }
+  }
+  .rf-product-list-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    .rf-product-list__picture {
+      width: 346rpx;
+      height: 346rpx;
+      position: relative;
+      .no-sale-num {
+        width: 346rpx;
+        height: 346rpx;
+        border-radius: 12rpx 12rpx 0 0;
+      }
+    }
+  }
+  &__item {
+    width: calc(50% - 10rpx);
+    margin-bottom: $spacing-base;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+    &:nth-child(2n + 1) {
+      margin-right: 10rpx;
+    }
+  }
+}
+// rf 通用列表样式
+.rf-list {
+  padding-top: $spacing-base;
+  margin-bottom: 40rpx;
+  .rf-list-item {
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    border-radius: 12rpx;
+    box-shadow: 0rpx 5rpx 25rpx rgba(0, 0, 0, 0.05);
+    padding: $spacing-base $spacing-lg;
+    margin: 0 $spacing-base $spacing-base;
+    .left {
+    }
+
+    .mid {
+      flex: 1;
+    }
+
+    .right {
+      .icon-bianji {
+        display: flex;
+        align-items: center;
+        height: 80rpx;
+        font-size: 40rpx;
+        color: $font-color-light;
+        padding-left: 30rpx;
+      }
+    }
+  }
+
+  .tips {
+    display: block;
+    padding: 16rpx 30rpx 10rpx;
+    font-size: 24rpx;
+  }
+
+  .no-data {
+    margin: $spacing-base 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+// rf 通用表单样式
+.rf-row-wrapper {
+  .row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 30rpx;
+    height: 110rpx;
+    background: #fff;
+
+    .tit {
+      flex-shrink: 0;
+      width: 140rpx;
+      font-size: 30rpx;
+      color: $font-color-dark;
+    }
+
+    .input {
+      flex: 1;
+      font-size: 30rpx;
+      color: $font-color-dark;
+    }
+
+    .icon-shouhuodizhi {
+      font-size: 36rpx;
+      color: $font-color-light;
+    }
+  }
+  .default-row {
+    margin-top: 16rpx;
+
+    .tit {
+      flex: 1;
+    }
+
+    switch {
+      transform: translateX(8px) scale(0.9);
+    }
+  }
+  .add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 690rpx;
+    height: 80rpx;
+    margin: 60rpx auto;
+    font-size: $font-lg;
+    border-radius: 10rpx;
+  }
+}
+// 抽屉列表样式
+.rf-drawer {
+  .rf-drawer-title {
+    display: flex;
+    justify-content: center;
+    margin: 20rpx 0;
+    font-size: $font-lg;
+  }
+
+  .rf-drawer-list {
+    margin: 0 $spacing-lg;
+
+    .rf-drawer-item {
+      padding: $spacing-base 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+
+      .left {
+        width: 88%;
+
+        .title {
+          font-size: $font-lg;
+          color: $font-color-dark;
+        }
+
+        .desc {
+          font-size: $spacing-sm;
+          margin: 10rpx 10rpx 10rpx 0;
+          color: $font-color-light;
+        }
+      }
+    }
+  }
+
+  .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 360rpx;
+      height: 76rpx;
+      line-height: 76rpx;
+      border-radius: 50px;
+      margin-top: 70rpx;
+      font-size: $font-lg;
+      border: none;
+      &:after {
+        border-radius: 100px;
+      }
+    }
+  }
+}
+// 订单列表
+.rf-order-item {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-base;
+  margin: $spacing-base $spacing-base 0;
+  // box-shadow: 0 5rpx 20rpx rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
+  border-radius: 16rpx;
+  .i-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-base;
+    color: $font-color-dark;
+    padding: $spacing-sm 0 $spacing-base;
+    position: relative;
+    .merchant {
+      display: flex;
+      align-items: center;
+      .merchant-logo {
+        width: 42rpx;
+        height: 42rpx;
+        margin-right: $spacing-sm;
+        border-radius: 6rpx;
+      }
+      .title {
+        font-size: $font-base + 2rpx;
+        font-weight: 500;
+      }
+      .iconfont {
+        font-size: $font-sm;
+        margin-left: $spacing-sm;
+        color: $font-color-light;
+      }
+    }
+    .time {
+      flex: 1;
+    }
+    .del-btn {
+      padding: 10rpx 0 10rpx 36rpx;
+      font-size: $font-lg;
+      color: $font-color-light;
+      position: relative;
+      &:after {
+        content: '';
+        width: 0;
+        height: 30rpx;
+        border-left: 1px solid $border-color-dark;
+        position: absolute;
+        left: 20rpx;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  /* 多条商品 */
+  .goods-box {
+    padding-top: 10rpx;
+    height: 220rpx;
+    .goods-item {
+      overflow: hidden;
+      height: 100%;
+      width: 160rpx;
+      margin-right: 16rpx;
+      display: inline-block;
+      .goods-img {
+        display: block;
+        width: 100%;
+        height: 140rpx;
+      }
+      .goods-title {
+        font-size: $font-sm - 2rpx;
+        line-height: 32rpx;
+      }
+    }
+  }
+  /* 单条商品 */
+  .goods-box-single {
+    display: flex;
+    margin: 10rpx 0 0 0 ;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.02);
+    .goods-img {
+      display: block;
+      width: 176rpx !important;
+      height: 176rpx;
+      border-radius: 8rpx;
+      margin-right: 16rpx;
+    }
+    .info{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .detail{
+        display: flex;
+      }
+      .foot{
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        .original-price{
+          font-size: 28rpx;
+          color: #999;
+        }
+        .paid-in{
+          font-size: 28rpx;
+          color: #333;
+        }
+      }
+    }
+    .mid {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      // padding: 0  $spacing-base;
+      overflow: hidden;
+      .title {
+        font-size: $font-base + 2rpx;
+        font-weight: 400;
+        line-height: 36rpx;
+        color: $font-color-dark;
+        margin-bottom: $spacing-sm;
+      }
+      .attr-box {
+        background-color: $page-color-light;
+        font-size: $font-sm;
+        color: $font-color-light;
+        border-radius: 20rpx;
+        padding: 4rpx $spacing-base;
+      }
+    }
+    .right {
+      //flex: 1;
+      font-size: $font-sm;
+      text-align: right;
+      margin-left: $spacing-sm;
+      .price {
+        font-size: $font-lg;
+      }
+      .num {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: $font-color-light;
+        margin-top: $spacing-sm;
+      }
+    }
+  }
+  .price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15rpx 0;
+    .total {
+      color: $font-color-light;
+      font-size: $font-base;
+    }
+    .amount {
+      color: $font-color-dark;
+      font-size: $font-lg;
+    }
+    .num {
+      margin: 0 8rpx;
+      color: $font-color-dark;
+    }
+    .price:first-child {
+      margin-right: $spacing-sm;
+    }
+  }
+  .action-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    .action-btn {
+      width: 150rpx;
+      height: 56rpx;
+      margin: 0 0 0 $spacing-base;
+      padding: 0;
+      text-align: center;
+      line-height: 56rpx;
+      font-size: $font-sm;
+      border-radius: 28rpx;
+    }
+    .action-btn::after {
+      border-radius: 56rpx;
+    }
+  }
+}
+// 滑动分类
+.index-cate {
+  white-space: nowrap;
+  z-index: 12;
+  color: $font-color-base;
+  .index-cate-item {
+    display: inline-block;
+    height: 73rpx;
+    line-height: 54rpx;
+    margin: 8rpx 15rpx 10rpx;
+    text-align: center;
+    padding: 0 10rpx;
+    color: $color-white;
+    font-size: $font-base;
+  }
+  .active {
+    font-weight: 500;
+    font-size: $font-lg;
+  }
+  .integral-active {
+    display: block;
+    width: 45rpx;
+    margin: 0 auto;
+    height: 6rpx;
+    border-radius: 6rpx;
+    background-color: $color-white;
+  }
+}
+.discount-tag {
+  margin-left: $spacing-sm;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-bottom: 6rpx;
+}
+// 弹窗样式
+.rf-popup-rule{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 100;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  padding: $spacing-base $spacing-lg;
+  .content{
+    height: 80vh;
+    width: 100%;
+    padding: 0 $spacing-base;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10rpx;
+  }
+}
+.list-cell {
+  display: flex;
+  align-items: center;
+  padding: 20rpx $page-row-spacing;
+  line-height: 60rpx;
+  position: relative;
+  background: #fff;
+  justify-content: center;
+
+  &.log-out-btn {
+    margin: 40rpx 0;
+    .cell-tit {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+
+  &.cell-hover {
+    background: #fafafa;
+  }
+
+  &.b-b:after {
+    left: 30rpx;
+  }
+
+  &.m-t {
+    margin-top: 16rpx;
+  }
+
+  .cell-more {
+    align-self: baseline;
+    font-size: $font-lg;
+    color: $font-color-light;
+    margin-left: 10rpx;
+  }
+
+  .cell-tit {
+    min-width: 60rpx;
+    flex: 1;
+    font-size: $font-base + 2rpx;
+    margin-right: 10rpx;
+  }
+
+  .cell-tip {
+    font-size: $font-base;
+    color: $font-color-light;
+  }
+
+  switch {
+    transform: translateX(8px) scale(0.84);
+  }
+}
+.hide-canvas {
+  position: fixed;
+  bottom: -999999px;
+}
+// 支付方式列表
+.rf-pay-type-list {
+  margin: 60rpx 0;
+  background-color: #fff;
+  padding: 0 40rpx;
+  .type-item {
+    padding: 0 $spacing-lg;
+    height: 100rpx;
+    border-radius: 100rpx;
+    margin-bottom: $spacing-lg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30rpx;
+    position: relative;
+    border: 2rpx solid rgba(0, 0, 0, 0.12);
+  }
+
+  .type-item-active {
+    border: 2rpx solid;
+  }
+  .iconfont {
+    font-size: 45rpx;
+    margin: 0 $spacing-base;
+    color: $font-color-light;
+  }
+}
+// 通用列表
+.rf-base-list {
+  padding-top: $spacing-base;
+  &__item {
+    background-color: $color-white;
+    border-radius: 12rpx;
+    box-shadow: 0rpx 5rpx 25rpx rgba(0, 0, 0, 0.05);
+    padding: $spacing-base $spacing-lg;
+    margin: 0 $spacing-base $spacing-base;
+  }
+}
+// 通用底部按钮
+.rf-bottom-btn {
+  background-color: $color-white;
+  width: 750rpx;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  padding:  $spacing-base 0;
+  &__btn {
+    font-size: $font-base;
+    margin: 0 $spacing-lg;
+    border-radius: $border-radius-base;
+  }
+}
+// 通用右滑菜单列表
+.rf-carrier {
+  min-height: 160rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  &__menu {
+    position: absolute;
+    width: 29%;
+    height: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  &__item {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    @keyframes showMenu {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-30%);
+      }
+    }
+    @keyframes closeMenu {
+      0% {
+        transform: translateX(-30%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    &.open {
+      animation: showMenu 0.25s linear both;
+    }
+    &.close {
+      animation: closeMenu 0.15s linear both;
+    }
+  }
+}
+// 通用长按钮
+.rf-confirm-btn {
+  font-size: $font-base;
+  margin: 70rpx auto 0;
+  display: flex;
+  justify-content: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  align-items: center;
+}
+// 短按钮
+.rf-short-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12rpx;
+  margin: 0;
+  font-size: $font-sm;
+}
+// 发送验证码样式
+.rf-input-sms-code {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &__input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sms-code-btn {
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $font-color-base;
+    border-radius: 12rpx;
+    margin: 0;
+    font-size: 24rpx;
+    line-height: 56rpx;
+    height: 56rpx;
+    padding: 0 16rpx;
+    border: 1rpx solid $font-color-light;
+  }
+}
+/* 上传 */
+.rf-uploader {
+  position: relative;
+  .rf-uploader-content {
+    flex: 1;
+    flex-direction: column;
+    &__close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6rpx;
+      color: $color-white;
+      border-radius: 6rpx;
+    }
+  }
+  .rf-uploader-content__files {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .rf-uploader-content__file {
+    margin: 10rpx;
+    width: 208rpx;
+    height: 208rpx;
+    position: relative;
+    border-radius: 6rpx;
+  }
+  .rf-uploader-content__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .rf-uploader-content__input-box {
+    position: relative;
+    margin: 10rpx;
+    width: 208rpx;
+    height: 208rpx;
+    border: 2rpx solid #d9d9d9;
+    border-radius: 6rpx;
+  }
+  .rf-uploader-content__input-box:before,
+  .rf-uploader-content__input-box:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d9d9d9;
+  }
+  .rf-uploader-content__input-box:before {
+    width: 4rpx;
+    height: 49rpx;
+  }
+  .rf-uploader-content__input-box:after {
+    width: 49rpx;
+    height: 4rpx;
+  }
+  .rf-uploader-content__input-box:active {
+    border-color: #999999;
+  }
+  .rf-uploader-content__input-box:active:before,
+  .rf-uploader-content__input-box:active:after {
+    background-color: #999999;
+  }
+  .rf-uploader-content__input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 6rpx;
+  }
+  .video {
+    border-radius: 6rpx;
+  }
+}
+
+// 底部popup滑动
+.rf-scroll-bottom {
+  max-height: 60vh;
+}
