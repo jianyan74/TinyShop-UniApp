@@ -49,6 +49,7 @@ const initConfigList = async () => {
     await store.dispatch('user/setConfigList', { configList: configList });
     if (!configList?.config?.style_user_is_open) {
       mConstData.themeList.forEach((item) => {
+		configList.config.style_type = 'pink';
         if (item.name === configList?.config?.style_type) {
           store.commit('theme/setThemeColor', item);
         }
